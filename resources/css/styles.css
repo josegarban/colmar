@@ -1,6 +1,6 @@
 /* Font used all over the website */
 
-header, body{
+html{
   font-family: helvetica, sans-serif;
   font-size: 16px;
 }
@@ -9,7 +9,7 @@ header, body{
 /* Header */
 
 header{
-  position:absolute;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 64px;
@@ -31,12 +31,16 @@ header .logo{
 }
 
 #colmar{
+  padding-right: 0;
+  margin-right: 0;
   font-size: 1.5rem;
   font-weight: bold;
   color: #4a4a4a;
 }
 
 #academy{
+  padding-left: 0;
+  margin-left: 0;
   font-size: 1.5rem;
   color: #9b9b9b;
 }
@@ -57,10 +61,150 @@ header nav{
   margin-right: 1.5rem;
 }
 
-/* Body */
 
-body
 
-#div1{
-  background-color: hsv(0,0,85);
+/* Body (everything not in the header)*/
+
+body{
+  margin-top: 64px;
+  width: 100%;
+  display: block;
+}
+
+/* First section: Banner */
+
+.banner{
+  background-color: #d8d8d8;
+  display: flex;
+}
+
+/* Big picture in the banner */
+
+.banner img{
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+/* Sign up text and button */
+
+.banner div{
+  width: 25%;
+  margin-left: 1.5rem;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.banner h1{
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.banner h2{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #4a4a4a;
+}
+
+.banner .button{
+  margin: 2rem 0 0 0;
+  width: 90%;
+
+  background-color: #4a4a4a;
+}
+
+.banner .button a{
+  padding: .5rem 0;
+
+  color: white;
+  text-decoration: none;
+  align-self: center;
+}
+
+/* Second section: Information **********************************************************************************/
+
+.information{
+  background-color: #f3f5f5;
+  display: flex;
+}
+
+/* Big picture and text in second section: Information */
+
+.leftbox{
+  width: 60%;
+  margin: 0;
+
+  display: inline-block;
+}
+
+.leftbox img{
+  padding: 2rem 1.5rem;
+  max-width: 100%;
+}
+
+.leftbox h2, p, span{
+  padding: 1rem 1.5rem;
+  color: #4a4a4a;
+}
+
+.leftbox h2{
+  padding: 0 1.5rem;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.leftbox p{
+  padding: 1.25rem 1.5rem 3rem 1.5rem;
+}
+
+.leftbox span{
+  padding-left: 1.5rem;
+
+  font-size: .75rem;
+}
+
+/* Article descriptions in second section: Information */
+
+.rightbox{
+  width: 40%;
+}
+
+.rightbox div{
+  margin: 2rem 0 2rem 2rem;
+  display: flex;
+}
+
+.rightbox img{
+  max-width: 35%;
+  min-width: 35%;
+  margin: 0 1rem;
+  padding: 0 1rem;
+}
+
+.rightbox aside{
+  padding: 0;
+  margin-right: 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.rightbox h2, p{
+  padding: 0;
+  margin: 0 0 .5rem 0;
+  color: #4a4a4a;
+}
+
+.rightbox h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.rightbox a{
+  color: #4a90e2;
+  text-decoration: none;
 }
