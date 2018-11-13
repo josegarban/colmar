@@ -23,7 +23,7 @@ h3{
   color: #4a4a4a;
 }
 
-p, span{
+h4, p, span{
   color: #4a4a4a;
 }
 
@@ -73,7 +73,7 @@ header ul{
 header a{
   padding-left: 1rem;
 
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   color: #4d4d4d;
   text-decoration: none;
 }
@@ -82,11 +82,31 @@ header nav{
   margin-right: 1.5rem;
 }
 
+.logo.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .logo .mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  header .logo{
+    width: 100%;
+  }
+
+  #colmar, #academy, nav{
+    display: none;
+  }
+}
+
 /* Body (everything not in the header)***********************************************************************************/
 
 body{
   margin-top: 64px;
-  width: 100%;
+  /* width: 100%; */
   display: block;
 }
 
@@ -142,6 +162,25 @@ body{
 
 .button:hover{
   background-color: #4a90e2;
+}
+
+@media only screen and (max-width: 720px) {
+  .banner {
+    display: block
+  }
+
+  .banner img{
+    width: 100%;
+    padding-left: 0;
+  }
+
+  header .logo{
+    width: 100%;
+  }
+
+  #colmar, #academy, nav{
+    display: none;
+  }
 }
 
 /* Second section: Information **********************************************************************************/
@@ -218,7 +257,7 @@ body{
 
 .rightbox h3, .rightbox p{
   max-width: 100%;
-  margin: 0 0 .5rem 0;
+  margin: 0 1rem .5rem 0;
 }
 
 .rightbox a{
@@ -231,16 +270,16 @@ body{
 .courses{
   background-color: #eaebec;
   display: block;
-  padding: 2rem 0 4rem 0;
+  padding: 1rem 0 1.5rem 0;
 }
 
 /* This section's header */
 .courses h2{
-  height: 3rem;
-  width: 100%
+  padding: .75rem 0;
+  width: 100%;
 
-  display: block;
   text-align: center;
+  display: block;
 }
 
 /* Couse descriptions laid out in a grid */
@@ -248,14 +287,17 @@ body{
   padding: 0 3.5rem;
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
-  grid-template-rows: 50% 50%;
-  grid-row-gap: 2rem;
-  grid-column-gap: 0rem;
+  /*grid-template-rows: 50% 50%; */
+  /* grid-row-gap: 2rem;
+  /* grid-column-gap: 0; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-rows: 23rem 23rem;
 }
+/* After testing the grid layout on Firefox it seems some properties were not supported, so I changed some properties*/
 
 /* Course descriptions */
 .course-description {
-  padding: 0rem 1rem;
+  margin: 1rem;
   max-height: 100%;
 
   display: flex;
@@ -268,13 +310,23 @@ body{
 
 /* Descriptive text gathered in an aside */
 .course-description aside{
-  padding: 1rem 1rem 1.5rem 1rem;
+  min-height: 7.5rem;
+  padding-bottom: 1.5rem;
   background-color: white;
-  flex-grow: 1;
 }
 
-.course-description h3, .course-description p{
-  margin: .5rem;
+.course-description h3{
+  padding: 1rem 1rem 0 1rem;
+}
+
+.course-description h4{
+  padding: .5rem 1rem .5rem 1rem;
+}
+
+.course-description p{
+  padding: 0 1rem;
+
+  background-color: white;
 }
 
 /* Fourth section: Thesis ***********************************************************************************/
@@ -285,16 +337,20 @@ body{
 }
 
 .thesis h2{
-  padding-top: 2rem;
-  width: 100%
+  padding: 2rem 0 .75rem 0;
+  width: 100%;
 
-  display: block;
   text-align: center;
+  display: block;
+}
+
+.thesis.rightbox{
+  margin-top: 0;
 }
 
 video{
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 0 1.5rem;
   background-color: #f3f5f5;
 }
 
