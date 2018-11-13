@@ -5,7 +5,7 @@ html{
   font-size: 16px;
 }
 
-* {
+.course-table {
     box-sizing: border-box;
 }
 
@@ -27,7 +27,7 @@ p, span{
   color: #4a4a4a;
 }
 
-/* Header */
+/* Header ***********************************************************************************/
 
 header{
   position: absolute;
@@ -82,9 +82,7 @@ header nav{
   margin-right: 1.5rem;
 }
 
-
-
-/* Body (everything not in the header)*/
+/* Body (everything not in the header)***********************************************************************************/
 
 body{
   margin-top: 64px;
@@ -92,7 +90,7 @@ body{
   display: block;
 }
 
-/* First section: Banner */
+/* First section: Banner ***********************************************************************************/
 
 .banner{
   background-color: #d8d8d8;
@@ -142,6 +140,10 @@ body{
   align-self: center;
 }
 
+.button:hover{
+  background-color: #4a90e2;
+}
+
 /* Second section: Information **********************************************************************************/
 
 .information{
@@ -154,6 +156,7 @@ body{
 .leftbox{
   width: 60%;
   margin: 0;
+  padding-bottom: .5rem;
 
   display: inline-block;
 }
@@ -163,55 +166,58 @@ body{
   max-width: 100%;
 }
 
-.leftbox h2, p, span{
-  padding: 1rem 1.5rem;
-}
-
 .leftbox h2{
-  padding: 0 1.5rem;
+  padding: .5rem 1.5rem;
 }
 
 .leftbox p{
-  padding: 1.25rem 1.5rem 3rem 1.5rem;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
 }
 
 .leftbox span{
-  padding-left: 1.5rem;
-
   font-size: .75rem;
 }
 
-/* Article descriptions in second section: Information */
+/* Article descriptions in second section: Information and in the fourth section: Thesis */
 
 .rightbox{
   width: 40%;
+  margin: 1.5rem 0 2rem 2rem;
+  display: flex;
+  flex-flow: column;
 }
 
-/* Divs within the right side of this section*/
-.rightbox div{
-  margin: 2rem 0 2rem 2rem;
+/* Divs within the right side of sections Information and Thesis*/
+.preview{
+  padding: 0.5rem 0 .5rem 1rem;
   display: flex;
 }
 
-.rightbox img{
+.preview:hover{
+  background-color: #d8d8d8;
+}
+
+.imageholder{
   max-width: 35%;
-  min-width: 35%;
+}
+
+.rightbox img{
+  width: 100%;
   margin: 0 1rem;
   padding: 0 1rem;
 }
 
-/* Descriptive text gathered in an aside */
+/* Descriptive text gathered in an aside in sections Information and Thesis*/
 .rightbox aside{
-  padding: 0;
-  margin-right: 0;
+  margin-left: 15%;
 
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
 
-.rightbox h3, p{
-  padding: 0;
+.rightbox h3, .rightbox p{
+  max-width: 100%;
   margin: 0 0 .5rem 0;
 }
 
@@ -220,17 +226,17 @@ body{
   text-decoration: none;
 }
 
-/* Second section: Courses **********************************************************************************/
+/* Third section: Courses ***********************************************************************************/
 
 .courses{
   background-color: #eaebec;
   display: block;
-  padding: 2rem;
+  padding: 2rem 0 4rem 0;
 }
 
 /* This section's header */
 .courses h2{
-  min-height: 3rem;
+  height: 3rem;
   width: 100%
 
   display: block;
@@ -243,11 +249,14 @@ body{
   display: grid;
   grid-template-columns: 33.33% 33.33% 33.33%;
   grid-template-rows: 50% 50%;
+  grid-row-gap: 2rem;
+  grid-column-gap: 0rem;
 }
 
 /* Course descriptions */
 .course-description {
-  padding: 1rem 1rem;
+  padding: 0rem 1rem;
+  max-height: 100%;
 
   display: flex;
   flex-flow: column;
@@ -264,6 +273,57 @@ body{
   flex-grow: 1;
 }
 
-.course-description h3, p{
+.course-description h3, .course-description p{
   margin: .5rem;
+}
+
+/* Fourth section: Thesis ***********************************************************************************/
+
+/* Styles not present in section Information */
+.thesis{
+  background-color: #f3f5f5;
+}
+
+.thesis h2{
+  padding-top: 2rem;
+  width: 100%
+
+  display: block;
+  text-align: center;
+}
+
+video{
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #f3f5f5;
+}
+
+/* Footer ***********************************************************************************/
+
+footer{
+  width: 100%;
+  padding: 1rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer div{
+  margin-left: 1.5rem;
+}
+footer nav{
+  margin-right: 1.5rem;
+}
+
+footer ul{
+  display: inline-flex;
+}
+
+footer a{
+  padding-left: 1rem;
+
+  font-size: 1rem;
+  color: #4d4d4d;
+  text-decoration: none;
 }

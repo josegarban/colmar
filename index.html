@@ -47,17 +47,19 @@ others are grouped in a div to the right-->
     <section class="information">
       <div class="leftbox">
         <img src="./resources/images/information-main.jpg" alt="Man learning at Colmar Academy">
-        <div>
+        <aside>
           <h2>It doesn't hurt to keep practicing</h2>
           <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristiqu ligula."</p>
-          <span>Emanuel, Sr Strategist at Hiring.com</span>
-        </div>
+          <p><span>Emanuel, Sr Strategist at Hiring.com</span></p>
+        </aside>
       </div>
 
       <div class="rightbox">
 
-        <div class="">
-          <img src="./resources/images/information-orientation.jpg" alt="People on walkway to Colmar Academy">
+        <div class="preview">
+          <div class="imageholder">
+            <img src="./resources/images/information-orientation.jpg" alt="People on walkway to Colmar Academy">
+          </div>
           <aside>
             <h3>Orientation date</h3>
             <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
@@ -65,8 +67,10 @@ others are grouped in a div to the right-->
           </aside>
         </div>
 
-        <div class="">
-          <img src="./resources/images/information-campus.jpg" alt="People at the Colmar Academy campus">
+        <div class="preview">
+          <div class="imageholder">
+            <img src="./resources/images/information-campus.jpg" alt="People at the Colmar Academy campus">
+          </div>
           <aside>
             <h3>Our campus</h3>
             <p>Find which campus is close by you</p>
@@ -74,8 +78,10 @@ others are grouped in a div to the right-->
           </aside>
         </div>
 
-        <div class="">
-          <img src="./resources/images/information-guest-lecture.jpg" alt="Guest lecturer at Colmar Academy">
+        <div class="preview">
+          <div class="imageholder">
+            <img src="./resources/images/information-guest-lecture.jpg" alt="Guest lecturer at Colmar Academy">
+          </div>
           <aside>
             <h3>Our guest lecture</h3>
             <p>Join a keynote with Oliver Sack about music in medical treatment</p>
@@ -86,13 +92,11 @@ others are grouped in a div to the right-->
 
     </section>
 
-<!-- Section 3: courses
-Div "course-header" is this section's title
-Div "course table" is a flex container containing smaller containers with a picture and description of each course-->
-
+<!-- Section 3: courses -->
     <section class="courses">
         <h2>Start learning</h2>
       <div class="course-table">
+<!-- Div "course table" is a grid container containing smaller containers with a picture and description of each course-->
 
         <div class="course-description course-1">
           <img src="./resources/images/course-software.jpg" alt="Software engineering courses">
@@ -119,6 +123,7 @@ Div "course table" is a flex container containing smaller containers with a pict
           </aside>
         </div>
 
+<!-- More course descriptions-->
         <div class="course-description course-4">
           <img src="./resources/images/course-data.jpg" alt="Data courses">
           <aside>
@@ -147,6 +152,57 @@ Div "course table" is a flex container containing smaller containers with a pict
       </div>
     </section>
 
+    <!-- Section 4 will be the thesis section -->
+    <section class="thesis">
+      <h2>Thesis exhibit</h2>
+      <!-- Div containing the leftboc with the video and the rightbox with articles and descriptions -->
+    </section>
+
+    <section class="information">
+      <div class="leftbox">
+        <video width="640" height="480" controls src="./resources/videos/thesis.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <aside>
+          <h2>Reimagine urban</h2>
+          <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
+      </div>
+        <div class="rightbox">
+
+        <div class="preview">
+          <div class="imageholder">
+            <img src="./resources/images/thesis-fisma.jpg" alt="Fisma">
+          </div>
+          <aside>
+            <h3>Fisma: Design and Prototype</h3>
+            <p>Designer showcase of new prototype product</p>
+          </aside>
+        </div>
+        <div class="preview">
+          <div class="imageholder">
+            <img src="./resources/images/thesis-now-and-then.jpg" alt="New York picture showing the Empire State">
+          </div>
+          <aside>
+            <h3>Now and then</h3>
+            <p>Research study about New York</p>
+          </aside>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+      <div>
+        <p> &copy 2016 Colmar Academy. All rights reserved.</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Terms</a> </li>
+          <li><a href="#">Privacy</a> </li>
+        </ul>
+      </nav>
+    </footer>
 
   </body>
 </html>
