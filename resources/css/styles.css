@@ -5,6 +5,27 @@ html{
   font-size: 16px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* General text styles */
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+h3{
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+p, span{
+  color: #4a4a4a;
+}
 
 /* Header */
 
@@ -104,8 +125,6 @@ body{
 
 .banner h2{
   margin-top: 2rem;
-  font-size: 1.5rem;
-  color: #4a4a4a;
 }
 
 .banner .button{
@@ -146,14 +165,10 @@ body{
 
 .leftbox h2, p, span{
   padding: 1rem 1.5rem;
-  color: #4a4a4a;
 }
 
 .leftbox h2{
   padding: 0 1.5rem;
-
-  font-size: 1.5rem;
-  font-weight: 600;
 }
 
 .leftbox p{
@@ -172,6 +187,7 @@ body{
   width: 40%;
 }
 
+/* Divs within the right side of this section*/
 .rightbox div{
   margin: 2rem 0 2rem 2rem;
   display: flex;
@@ -184,6 +200,7 @@ body{
   padding: 0 1rem;
 }
 
+/* Descriptive text gathered in an aside */
 .rightbox aside{
   padding: 0;
   margin-right: 0;
@@ -193,18 +210,60 @@ body{
   justify-content: center;
 }
 
-.rightbox h2, p{
+.rightbox h3, p{
   padding: 0;
   margin: 0 0 .5rem 0;
-  color: #4a4a4a;
-}
-
-.rightbox h2{
-  font-size: 1.5rem;
-  font-weight: 600;
 }
 
 .rightbox a{
   color: #4a90e2;
   text-decoration: none;
+}
+
+/* Second section: Courses **********************************************************************************/
+
+.courses{
+  background-color: #eaebec;
+  display: block;
+  padding: 2rem;
+}
+
+/* This section's header */
+.courses h2{
+  min-height: 3rem;
+  width: 100%
+
+  display: block;
+  text-align: center;
+}
+
+/* Couse descriptions laid out in a grid */
+.course-table{
+  padding: 0 3.5rem;
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-template-rows: 50% 50%;
+}
+
+/* Course descriptions */
+.course-description {
+  padding: 1rem 1rem;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.course-description img{
+  max-width: 100%;
+}
+
+/* Descriptive text gathered in an aside */
+.course-description aside{
+  padding: 1rem 1rem 1.5rem 1rem;
+  background-color: white;
+  flex-grow: 1;
+}
+
+.course-description h3, p{
+  margin: .5rem;
 }
