@@ -137,12 +137,11 @@ body{
  /* Sign up text and button */
 .banner-right div {
   max-width: 40%;
-  margin-left: 1.5rem;
   display: flex;
   flex-flow: column;
   justify-content: center;
-
 }
+
 .banner h1{
   margin-top: 40%;
   margin-left: 1.5rem;
@@ -151,12 +150,13 @@ body{
   font-weight: 600;
   color: #4a4a4a;
 }
+
 .banner h2{
   margin-top: 2rem;
   margin: 2rem 1.5rem 0 1.5rem;
 }
+
 .button{
-  margin: 2rem 0 0 0;
   margin: 1.5rem 1.5rem 2rem 1.5rem;
   background-color: #4a4a4a;
  }
@@ -178,16 +178,32 @@ body{
     display: block;
   }
 
-  .banner img{
-    width: 100%;
+  .banner-left{
+    max-width: 100%;
+  }
+
+  .banner-left img{
+    padding: 0;
+  }
+
+  .banner-right{
     padding: 2rem 0;
   }
 
-  .banner div{
-    width: 100%;
-    margin: 0;
+  .banner h1{
+    margin: 0 1rem 0 1rem;
   }
 
+  .banner h2{
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  .button{
+    min-width: 95%;
+    margin: 1.5rem 1rem 0 1rem;
+
+    background-color: #9b9b9b;
+  }
 }
 
 /* Second section: Information **********************************************************************************/
@@ -226,11 +242,9 @@ body{
 }
 
 @media only screen and (max-width: 720px) {
-  .information.leftbox {
+  .information .leftbox {
     display: none;
   }
-
-
 }
 
 /* Article descriptions in second section: Information and in the fourth section: Thesis */
@@ -265,6 +279,40 @@ body{
   width: 100%;
   margin: 0 1rem;
 }
+
+.imageholder-mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .rightbox{
+    width: 100%;
+  }
+
+  .preview{
+    display: inline-block;
+  }
+
+  .preview .imageholder {
+    display: none;
+  }
+
+  .imageholder-mobile{
+    display: block;
+    margin: 0 1rem;
+  }
+
+  .imageholder-mobile img{
+    width: 100%;
+  }
+
+  .preview aside{
+    display: block;
+    margin: 2rem 2rem;
+  }
+
+}
+
 
 /* Descriptive text gathered in an aside in sections Information and Thesis*/
 .preview aside{
@@ -350,6 +398,52 @@ body{
   background-color: white;
 }
 
+.course-description a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.course-description a:hover{
+  font-weight: bold;
+}
+
+.course-menu{
+ display: none;
+}
+
+@media only screen and (max-width: 720px) {
+  .course-menu{
+    padding-bottom: 1rem;
+    display: flex;
+    flex-flow: column;
+  }
+
+  .course-menu div{
+    padding: 1rem 1rem 1.5rem 1rem;
+    margin-top: .5rem;
+
+    background-color: #d8d8d8;
+  }
+
+  .course-menu p{
+    font-weight: bold;
+  }
+
+  .course-table{
+    display: none;
+  }
+
+  .course-menu div:hover {
+    background-color: #4a90e2;
+ }
+
+ .course-menu a{
+   color: inherit;
+   text-decoration: none;
+ }
+
+}
+
 /* Fourth section: Thesis ***********************************************************************************/
 
 /* Styles not present in section Information */
@@ -358,7 +452,7 @@ body{
 }
 
 .thesis h2{
-  padding: 2rem 0 .75rem 0;
+  padding: 2rem 0 1.5rem 0;
   width: 100%;
 
   text-align: center;
@@ -369,10 +463,25 @@ body{
   margin-top: 0;
 }
 
+.videobox{
+  display: none;
+}
+
 video{
   width: 100%;
   background-color: #f3f5f5;
 }
+
+@media only screen and (max-width: 720px) {
+   .videobox{
+    display: block;
+  }
+
+  .thesis.rightbox{
+    display: none;
+  }
+}
+
 
 /* Footer ***********************************************************************************/
 
