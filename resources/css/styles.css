@@ -5,7 +5,7 @@ html{
   font-size: 16px;
 }
 
-.course-table {
+div, aside, img {
     box-sizing: border-box;
 }
 
@@ -126,8 +126,8 @@ body{
  .banner-left{
    max-width: 60%;
 
-   display: flex;
- }
+/* if display: flex is used, the picture will stretch in the y axis  */
+}
 
  .banner-left img{
    max-width: 100%;
@@ -135,30 +135,40 @@ body{
  }
 
  /* Sign up text and button */
-.banner-right div {
+.banner-right {
   max-width: 40%;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.banner-right aside{
+  max-width: 65%;
+
   display: flex;
   flex-flow: column;
   justify-content: center;
 }
 
 .banner h1{
-  margin-top: 40%;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin: 2rem 1.5rem;
+
   font-size: 2.25rem;
   font-weight: 600;
   color: #4a4a4a;
 }
 
 .banner h2{
-  margin-top: 2rem;
-  margin: 2rem 1.5rem 0 1.5rem;
+  margin: 0 1.5rem;
 }
 
 .button{
-  margin: 1.5rem 1.5rem 2rem 1.5rem;
+  margin: 2rem 1.5rem;
   background-color: #4a4a4a;
+
+  display: flex;
+  justify-content: center;
  }
 
 .button a{
@@ -166,7 +176,6 @@ body{
 
    color: white;
    text-decoration: none;
-   align-self: center;
  }
 
  .button:hover{
@@ -179,15 +188,22 @@ body{
   }
 
   .banner-left{
+    display: flex;
     max-width: 100%;
+    height: auto;
   }
 
-  .banner-left img{
+  .banner img{
     padding: 0;
-  }
+}
 
   .banner-right{
+    max-width: 100%;
     padding: 2rem 0;
+  }
+
+  .banner aside{
+    max-width: 100%;
   }
 
   .banner h1{
@@ -260,7 +276,6 @@ body{
 /* Divs within the right side of sections Information and Thesis*/
  .preview{
   width: 100%;
-  margin: 0rem 0;
   padding: 1rem 0;
 
   display: flex;
@@ -272,12 +287,12 @@ body{
 
 .imageholder{
   max-width: 35%;
-  display: flex;
+  /* if display: flex is used, the picture will stretch in the y axis; */
 }
 
 .imageholder img{
   width: 100%;
-  margin: 0 1rem;
+  padding: 0 1rem;
 }
 
 .imageholder-mobile{
@@ -468,6 +483,7 @@ body{
 }
 
 video{
+  margin-top: -1rem;
   width: 100%;
   background-color: #f3f5f5;
 }
@@ -475,6 +491,7 @@ video{
 @media only screen and (max-width: 720px) {
    .videobox{
     display: block;
+    margin-top: 1rem;
   }
 
   .thesis.rightbox{
