@@ -29,59 +29,58 @@ h4, p, span{
 
 /* Header ***********************************************************************************/
 
-header{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 64px;
+ header{
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 64px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
 
-header div{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+ header div{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
 
-header .logo{
-  margin-left: 1.5rem;
-  height: 2rem;
-}
+ header img{
+   margin-left: 1.5rem;
+   height: 2rem;
+ }
 
-#colmar{
-  padding-right: 0;
-  margin-right: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #4a4a4a;
-}
+ #colmar{
+   padding-right: 0;
+   margin-right: 0;
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: #4a4a4a;
+ }
 
-#academy{
-  padding-left: 0;
-  margin-left: 0;
-  font-size: 1.5rem;
-  color: #9b9b9b;
-}
+ #academy{
+   padding-left: 0;
+   margin-left: 0;
+   font-size: 1.5rem;
+   color: #9b9b9b;
+ }
 
-header ul{
-  display: inline-flex;
-}
+ header ul{
+   display: inline-flex;
+ }
 
 header a{
   padding-left: 1rem;
-
+  font-size: 1.5rem;
   font-size: 1.15rem;
   color: #4d4d4d;
   text-decoration: none;
 }
 
-header nav{
+ header nav{
   margin-right: 1.5rem;
 }
-
 .logo.mobile {
   display: none;
 }
@@ -89,12 +88,15 @@ header nav{
 @media only screen and (max-width: 720px) {
   .logo .mobile {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
-  header .logo{
+  header div{
     width: 100%;
+  }
+
+  header img{
+    width: 25%;
+    margin-left: 0;
   }
 
   #colmar, #academy, nav{
@@ -102,11 +104,13 @@ header nav{
   }
 }
 
+
 /* Body (everything not in the header)***********************************************************************************/
 
 body{
   margin-top: 64px;
-  /* width: 100%; */
+  left: 0;
+  width: 100%;
   display: block;
 }
 
@@ -128,7 +132,6 @@ body{
 
 .banner div{
   width: 25%;
-  margin-left: 1.5rem;
 
   display: flex;
   flex-flow: column;
@@ -136,17 +139,19 @@ body{
 }
 
 .banner h1{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   font-size: 2.25rem;
   font-weight: 600;
   color: #4a4a4a;
 }
 
 .banner h2{
-  margin-top: 2rem;
+  margin: 2rem 1.5rem 0 1.5rem;
 }
 
 .banner .button{
-  margin: 2rem 0 0 0;
+  margin: 1.5rem 1.5rem 2rem 1.5rem;
   width: 90%;
 
   background-color: #4a4a4a;
@@ -171,16 +176,14 @@ body{
 
   .banner img{
     width: 100%;
-    padding-left: 0;
+    padding: 2rem 0;
   }
 
-  header .logo{
+  .banner div{
     width: 100%;
+    margin: 0;
   }
 
-  #colmar, #academy, nav{
-    display: none;
-  }
 }
 
 /* Second section: Information **********************************************************************************/
@@ -215,6 +218,23 @@ body{
 
 .leftbox span{
   font-size: .75rem;
+}
+
+@media only screen and (max-width: 720px) {
+  .information.leftbox {
+    display: none;
+  }
+
+  .banner img{
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .banner div{
+    width: 100%;
+    margin: 0;
+  }
+
 }
 
 /* Article descriptions in second section: Information and in the fourth section: Thesis */
@@ -361,9 +381,14 @@ footer{
   padding: 1rem 0;
 
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
+
+footer ul{
+  display: flex;
+  justify-content: space-between;
+}
+
 
 footer div{
   margin-left: 1.5rem;
@@ -372,9 +397,9 @@ footer nav{
   margin-right: 1.5rem;
 }
 
-footer ul{
+/* footer ul{
   display: inline-flex;
-}
+} */
 
 footer a{
   padding-left: 1rem;
@@ -382,4 +407,10 @@ footer a{
   font-size: 1rem;
   color: #4d4d4d;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 720px) {
+  footer nav{
+    display: none;
+  }
 }
